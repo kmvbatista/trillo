@@ -10,18 +10,17 @@
   background-color: var(--color-light-grey1);
   display: flex;
   justify-content: center;
-  align-items: center;
   &__input {
     font-family: inherit;
     font-size: inherit;
     background-color: var(--color-grey-light2);
     border: none;
     color: inherit;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     border-radius: 100px;
     width: 90%;
     margin-right: -3.25rem;
-    transition: all .2s;
+    transition: all 0.2s;
 
     &:focus {
       outline: none;
@@ -56,11 +55,14 @@
 //////////////USER NAVIGATION/*  */
 .user-nav {
   display: flex;
-  align-items: center;
+  align-self: stretch;
 
   & > * {
-     cursor: pointer;
-     padding: 0 2rem; 
+    cursor: pointer;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   & > *:hover {
@@ -68,28 +70,38 @@
   }
 
   &__icon-box {
-
+    position: relative;
   }
 
   &__icon {
     height: 2.5rem;
     width: 2.5rem;
+    fill: var(--color-grey-dark-2);
   }
 
   &__notification {
-
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    text-align: center;
+    font-size: 1rem;
   }
 
   &__user {
-
   }
 
   &__user-photo {
+    margin-right: .5rem;
     height: 3.75rem;
     border-radius: 50%;
   }
 
   &__user-name {
-
   }
 }
