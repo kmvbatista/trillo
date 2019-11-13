@@ -93,8 +93,6 @@
     font-size: 1rem;
   }
 
-  &__user {
-  }
 
   &__user-photo {
     margin-right: .5rem;
@@ -102,6 +100,72 @@
     border-radius: 50%;
   }
 
-  &__user-name {
+
+}
+////////SIDE NAVIGATION
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    position: relative;
   }
+
+  &__item::before {
+    content: "";
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .3s,
+                width .2s cubic-bezier(1,0,0,1) .2s,
+                background-color .2s;
+  }
+  
+  &__item:hover::before {
+    width: 100%;
+    transform: scaleY(1);
+  }
+
+  &__item:active::before {
+    background-color: var(--color-primary-light);
+  }
+  
+
+  &__link:link,
+  &__link:visited {
+    color: var(--color-grey-light1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+    margin-right: 2.5rem;
+  }
+}
+
+///////////LEGAL TEXT
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-light3);
 }
