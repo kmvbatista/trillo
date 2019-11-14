@@ -80,7 +80,7 @@
   }
 
   &__notification {
-    font-size: .8rem;
+    font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
     border-radius: 50%;
@@ -93,14 +93,11 @@
     font-size: 1rem;
   }
 
-
   &__user-photo {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     height: 3.75rem;
     border-radius: 50%;
   }
-
-
 }
 ////////SIDE NAVIGATION
 
@@ -126,11 +123,9 @@
     top: 0;
     transform: scaleY(0);
     transform-origin: bottom;
-    transition: transform .3s,
-                width .2s cubic-bezier(1,0,0,1) .2s,
-                background-color .2s;
+    transition: transform 0.3s, width 0.2s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.2s;
   }
-  
+
   &__item:hover::before {
     width: 100%;
     transform: scaleY(1);
@@ -139,7 +134,6 @@
   &__item:active::before {
     background-color: var(--color-primary-light);
   }
-  
 
   &__link:link,
   &__link:visited {
@@ -212,8 +206,8 @@
     fill: var(--color-primary);
   }
 
-  &__icon-location { 
-    margin-right: .5rem;
+  &__icon-location {
+    margin-right: 0.5rem;
   }
 
   &__rating {
@@ -236,7 +230,6 @@
   }
 }
 
-
 ///////////btn inline
 .btn-inline {
   border: none;
@@ -246,14 +239,13 @@
   font-size: inherit;
   padding-bottom: 2px;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 
   &:hover {
     color: var(--color-grey-dark-1);
-    animation: pulsate .5s infinite;
+    animation: pulsate 0.5s infinite;
   }
 }
-
 
 @keyframes pulsate {
   0% {
@@ -262,7 +254,7 @@
 
   50% {
     transform: scale(1.1);
-    box-shadow: 0 1rem 4rem rgba($color: black, $alpha: .3);
+    box-shadow: 0 1rem 4rem rgba($color: black, $alpha: 0.3);
   }
 
   100% {
@@ -275,11 +267,6 @@
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
 }
-
-
-
-
-
 
 //////LIST
 .list {
@@ -299,7 +286,7 @@
       display: inline-block;
       height: 1rem;
       width: 1rem;
-      margin-right: .7rem;
+      margin-right: 0.7rem;
 
       //newer browsers
       background-color: var(--color-primary);
@@ -310,5 +297,32 @@
       // background-size: cover;
     }
   }
-  
+}
+
+//////////////////////////recommend
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  &__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: auto;
+    &:not(:last-of-type) {
+      margin-right: -1.5rem;
+    }
+  }
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+
+  }
 }
