@@ -27,7 +27,10 @@ Grey dark 3: #999
 --color-grey: #ccc;
 --color-grey-dark-1: #333;
 --color-grey-dark-2: #777;
---color-grey-dark-3: #999;
+--color-grey-dark-3: rgba;
+
+--line-light: 1px solid var(--color-grey-light2);
+--shadow-light: 0 2rem 4rem rgba(0,0,0,.06);
 }
 
 * {
