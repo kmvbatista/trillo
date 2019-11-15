@@ -106,9 +106,24 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+    align-items: center;
+  }
+
   &__item {
+    
     &:not(:last-child) {
-      margin-bottom: 3rem;
+      margin-bottom: .5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
+    }
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+      justify-content: center;
+      display: flex;
     }
     position: relative;
   }
@@ -146,6 +161,10 @@
     align-items: center;
     z-index: 10;
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+    }
   }
 
   &__icon {
@@ -162,6 +181,9 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light3);
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 //////////////////////////////////////////////GALERY
@@ -321,7 +343,7 @@
     border: 3px solid white;
     margin-left: auto;
     &:not(:last-of-type) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 

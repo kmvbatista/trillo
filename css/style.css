@@ -130,10 +130,23 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0;
+      align-items: center; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
-      margin-bottom: 3rem; }
+      margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1;
+        justify-content: center;
+        display: flex; } }
   .side-nav__item::before {
     content: "";
     height: 100%;
@@ -160,6 +173,9 @@ body {
     align-items: center;
     z-index: 10;
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: 2rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -171,6 +187,9 @@ body {
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light3); }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -277,7 +296,7 @@ body {
     border: 3px solid white;
     margin-left: auto; }
     .recommend__photo:not(:last-of-type) {
-      margin-right: -1.5rem; }
+      margin-right: -2rem; }
   .recommend__count {
     margin-right: auto; }
 
@@ -371,18 +390,19 @@ body {
     outline: none; }
 
 .container {
-  max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-grey-light1);
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
   @media only screen and (max-width: 75em) {
     .container {
       margin: 0;
-      max-width: 100%;
-      width: 100%; } }
+      max-width: 100%; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .header {
   height: 7rem;
@@ -410,6 +430,9 @@ body {
   padding: 4.5rem;
   background-color: var(--color-grey-light1);
   border-bottom: var(--line-light); }
+  @media only screen and (max-width: 56.25em) {
+    .details {
+      padding: 1rem; } }
 
 .description {
   background-color: #fff;
@@ -417,6 +440,10 @@ body {
   flex-basis: 60%;
   margin-right: 4.5rem;
   padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 1rem;
+      margin-right: 1rem; } }
 
 .user-reviews {
   flex: 1; }
