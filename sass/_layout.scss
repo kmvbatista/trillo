@@ -17,13 +17,16 @@
 }
 
 .header {
-  height: 7rem;
   background-color: #fff;
   border-bottom: var(--line-light);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.4rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+  }
 }
 
 .sidebar {
@@ -65,6 +68,10 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 1rem;
     margin-right: 1rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
