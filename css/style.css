@@ -178,7 +178,8 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: var(--line-light); }
+  border-bottom: var(--line-light);
+  overflow: hidden; }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -224,6 +225,9 @@ body {
   .btn-inline:hover {
     color: var(--color-grey-dark-1);
     animation: pulsate 0.5s infinite; }
+    .btn-inline:hover span {
+      margin-left: 8px;
+      transition: margin-left .2s; }
 
 @keyframes pulsate {
   0% {
@@ -274,6 +278,53 @@ body {
   .recommend__count {
     margin-right: auto; }
 
+.user-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative; }
+  .review__text {
+    z-index: 10;
+    position: relative; }
+  .review__user {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%; }
+  .review__user-name {
+    font-weight: 600;
+    text-transform: uppercase; }
+  .review__user-date {
+    font-size: 1.2rem; }
+  .review__user-box {
+    display: flex;
+    margin-right: auto;
+    flex-direction: column;
+    margin-left: 1rem; }
+  .review__rating {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: var(--color-primary); }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    left: -1rem;
+    top: -3rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-grey-light3);
+    font-family: sans-serif;
+    z-index: 1; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -304,6 +355,7 @@ body {
   flex: 1; }
 
 .details {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light1);
@@ -314,9 +366,7 @@ body {
   box-shadow: var(--shadow-light);
   flex-basis: 60%;
   margin-right: 4.5rem;
-  padding: 3rem;
-  font-size: 1.4rem; }
+  padding: 3rem; }
 
 .user-reviews {
-  background-color: orchid;
   flex: 1; }

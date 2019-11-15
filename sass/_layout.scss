@@ -33,6 +33,7 @@
 }
 
 .details {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light1);
@@ -45,11 +46,9 @@
   flex-basis: 60%;
   margin-right: 4.5rem;
   padding: 3rem;
-  font-size: 1.4rem;
 }
 
 .user-reviews {
-  background-color: orchid;
   flex: 1;
 }
 
