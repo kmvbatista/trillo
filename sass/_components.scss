@@ -113,9 +113,8 @@
   }
 
   &__item {
-    
     &:not(:last-child) {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       @media only screen and (max-width: $bp-medium) {
         margin-bottom: 0;
       }
@@ -264,14 +263,13 @@
   cursor: pointer;
   transition: all 0.2s;
 
-
   &:hover {
     color: var(--color-grey-dark-1);
     animation: pulsate 0.5s infinite;
 
     span {
       margin-left: 8px;
-      transition: margin-left .2s;
+      transition: margin-left 0.2s;
     }
   }
 }
@@ -347,10 +345,13 @@
     }
   }
 
+  &__friends {
+    display: flex;
+  }
+
   &__count {
     margin-right: auto;
   }
-
 }
 /////////////////reviews
 .user-reviews {
@@ -365,6 +366,11 @@
   margin-bottom: 3.5rem;
   position: relative;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
   &__text {
     z-index: 10;
     position: relative;
@@ -374,7 +380,7 @@
     display: flex;
     align-items: center;
     margin-top: 2rem;
-  } 
+  }
 
   &__photo {
     height: 4.5rem;
@@ -445,7 +451,7 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &__visible {

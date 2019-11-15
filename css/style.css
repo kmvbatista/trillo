@@ -138,7 +138,7 @@ body {
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
-      margin-bottom: .5rem; }
+      margin-bottom: 0.5rem; }
       @media only screen and (max-width: 56.25em) {
         .side-nav__item:not(:last-child) {
           margin-bottom: 0; } }
@@ -249,7 +249,7 @@ body {
     animation: pulsate 0.5s infinite; }
     .btn-inline:hover span {
       margin-left: 8px;
-      transition: margin-left .2s; }
+      transition: margin-left 0.2s; }
 
 @keyframes pulsate {
   0% {
@@ -297,6 +297,8 @@ body {
     margin-left: auto; }
     .recommend__photo:not(:last-of-type) {
       margin-right: -2rem; }
+  .recommend__friends {
+    display: flex; }
   .recommend__count {
     margin-right: auto; }
 
@@ -311,6 +313,10 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
   .review__text {
     z-index: 10;
     position: relative; }
@@ -371,7 +377,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    transition: all .2s; }
+    transition: all 0.2s; }
   .btn__visible {
     padding: 2rem 7.5rem; }
   .btn__invisible {
@@ -433,6 +439,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .details {
       padding: 1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .details {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;

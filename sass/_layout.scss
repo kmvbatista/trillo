@@ -50,6 +50,9 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 1rem;
   }
+  @media only screen and (max-width: 37.5em) {
+    flex-direction: column;
+  }
 }
 
 .description {
