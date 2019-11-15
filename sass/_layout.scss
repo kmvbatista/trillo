@@ -3,6 +3,12 @@
   margin: 8rem auto;
   background-color: var(--color-grey-light1);
   box-shadow: 0 2rem 6rem rgba($color: #000, $alpha: .3);
+
+  @media only screen and (max-width: $bp-largest){
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .content {
